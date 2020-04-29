@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom';
 import './App.css';
 import RegisterForm from "./components/RegisterForm"
 import LoginForm from "./components/LoginForm"
+import RecipeForm from "./components/RecipeForm"
 import styled from 'styled-components';
 import companylogo from './company-logo.png';
 
@@ -48,17 +49,21 @@ function App() {
         
           <nav className="navigation">          
           <img src = {companylogo} className = "company-logo" alt="company-logo"/>          
-              <Link to='/'>Sign Up</Link>
-              <Link to='/Order' >Log in</Link>       
+              <Link to='/SignUp'>Sign Up</Link>
+              <Link to='/Login' >Log in</Link>
+              <Link to='/AddRecipe' >Add Recipe</Link>       
           </nav>
         
           </NavBarContainer>
         
-      <Route exact path="/">
+      <Route exact path="/SignUp">
           <RegisterForm />
         </Route>    
-        <Route path="/Order">
+        <Route path="/Login">
           <LoginForm />
+        </Route>
+        <Route path="/AddRecipe">
+          <RecipeForm />
         </Route>
       
 
