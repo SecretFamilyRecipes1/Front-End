@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import ProtectedRoute from "./utils/ProtectedRoute";
 import "./App.scss";
 import Nav from "./components/Navigation/Nav";
@@ -46,6 +46,8 @@ function App() {
             <HomeNav />
             <RecipePage />
           </ProtectedRoute>
+
+          <Redirect to ='/login' />
         </Switch>
       </div>
     </Router>
